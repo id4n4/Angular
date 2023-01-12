@@ -27,3 +27,7 @@ tipos
     * ngClass
     * ngStyle
     * ngModel
+
+## Help
+
+link: https://soka.gitlab.io/angular/

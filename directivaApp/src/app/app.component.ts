@@ -11,6 +11,7 @@ export class AppComponent {
   apellido : string = ""
   registrado : boolean = false
   mensaje : string = ""
+  cargo: string = ""
   entradas: Array<{titulo:string}>;
 
   constructor(){

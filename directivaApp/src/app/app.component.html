@@ -1,11 +1,16 @@
 <section id="ifElse">
   <h1 style="text-align: center;">{{titulo}}</h1>
   <form action="" class="d-flex flex-column align-items-center">
-  <input type="text" name="nombre" [(ngModel)]="nombre">
-  <input type="text" name="apellido" [(ngModel)]="apellido">
+  <input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nombre">
+  <input type="text" placeholder="Apellido" name="apellido" [(ngModel)]="apellido">
+  <input type="text" placeholder="Cargo" name="cargo" [(ngModel)]="cargo">
   <input type="submit" value="Registrar" (click)="registrarUsuario()">
   </form>
-  <p style="text-align: center;" *ngIf="registrado; else sinRegistrar">{{mensaje}} con el nombre de {{nombre}} {{apellido}}</p>
+  
+  <p style="text-align: center;" *ngIf="registrado; else sinRegistrar">
+    {{mensaje}} con el nombre de {{nombre}} {{apellido}}
+    con el cargo de <span [ngClass]="{paraDirectores: cargo == 'director'}">{{cargo}}</span>
+  </p>
 </section>
 <ng-template #sinRegistrar>
   <p>Nadie registrado</p>
